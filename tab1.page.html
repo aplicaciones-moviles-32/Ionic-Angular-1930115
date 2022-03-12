@@ -1,0 +1,17 @@
+<ion-app>
+  <ion-grid>
+      <ion-row *ngFor="let perrillo of perrillos">
+          <ion-col>
+              <ion-card>
+                  <ion-card-header>
+                      {{perrillo.usuario}}
+                  </ion-card-header>
+                  <ion-card-content>
+                      <img src="{{perrillo.src}}" alt="" size= "50px">
+                      <p class="caption">{{perrillo.caption}}</p>
+                  </ion-card-content>
+              </ion-card>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-app>
