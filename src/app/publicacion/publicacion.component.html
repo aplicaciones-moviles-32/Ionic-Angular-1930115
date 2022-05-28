@@ -1,38 +1,36 @@
-<ion-card mode="ios">
-    
-  <ion-card-header>
-      <ion-grid>
-          <ion-row>
-              <ion-col size="11">
-                  <strong> {{publicacionImprimir.id}} </strong>
-              </ion-col>
-              <ion-col size="1">
-                  <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-              </ion-col>
-          </ion-row>
-      </ion-grid>
-  </ion-card-header>
-  <ion-card-content>
-      <img [src]="publicacionImprimir.imagen" alt="" height="120px">
-  </ion-card-content>
-  <div>
-      <ion-grid>
-          <ion-row>
-              <!--iconos-->
-              <ion-col size="1">
-                  <ion-icon name="heart-outline"></ion-icon>
-              </ion-col>
-              <ion-col size="1">
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-              </ion-col>
-              <ion-col size="1">
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-              </ion-col>
-              <ion-col size="1" offset="8">
-                  <ion-icon name="bookmark-outline"></ion-icon>
-              </ion-col>
-          </ion-row>
-      </ion-grid>
-  </div>
-  
-</ion-card>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size-md="8" offset-md="2">
+                <ion-card>
+                    <ion-input type="file" expand="block" (change)="uploadPic($event)"> Upload Picture</ion-input>
+                    <ion-button expand="block" style="margin: 2mm;" (click)="takePic()">Take Picture</ion-button>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col size="10">
+                                        <div class="user-card-header">
+                                            <ion-avatar><img src="assets/gusta.jpg" width="50"></ion-avatar>
+                                            <ion-label class="label">{{user.nombre}}</ion-label>
+                                        </div>
+                                    </ion-col>
+                                    
+                                </ion-row>
+                            </ion-grid>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+                            <ion-row>
+                              <ion-col>
+                                <ion-button type="submit" color="secondary" expand="block">Publish</ion-button>
+                              </ion-col>
+                            </ion-row>
+                          </form>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

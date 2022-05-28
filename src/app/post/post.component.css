@@ -1,0 +1,12 @@
+ion-avatar{
+    align-self: center;
+    width: 34px;
+    height: 34px;
+}
+.label{
+    align-self: center;
+    margin-left: 10px;
+}
+.user-card-header {
+    display: flex;
+}

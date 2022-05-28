@@ -1,34 +1,15 @@
-.usuario {
-    color: gray;
-    font-size: 12px;
-    padding: 20px 10px;
+.usuario{
+	color: gray;
+	font-size: 12px;
+	padding: 10px 20px;
 }
 
-.caption {
-    color: darkgray;
-    font-size: 16px;
+.caption{
+	color: darkgray;
+	font-size: 16px;
 }
 
-.card {
-    border: solid 1px gray;
-    margin-bottom: 10px;
-}
-
-.opciones {
-    display: flex;
-    
-}
-
-ion-avatar{
-    align-self: center;
-    width: 34px;
-    height: 34px;
-    
-}
-.usuario-card-header {
-    display: flex;
-}
-.label{
-    align-self: center;
-    margin-left: 10px;
+.card{
+	border: solid 1px gray;
+	margin-bottom: 10px;
 }

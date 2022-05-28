@@ -1,23 +1,29 @@
-.container-img {
-    position: relative;
+.container-img{
+	position: relative;
 }
 
-ion-avatar{
-    width: 120px;
-    height: 120px;
+.fotodeperfil{
+	border-radius: 50%;
+	width: 60px;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	border: solid 5px white;
+
 }
 
-@media screen and (max-width: 768px) {
-    ion-avatar {
-        width: 60px;
-        height: 60px;
-    }
+.historia{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: rgb(255, 17, 130);
+	background: radial-gradient(cricle, rgba(255, 17, 130, 1.0)0%, rgba(255, 21, 127, 1.0)13%, rgba(255, 17, 166, 1.0)24%, rgba(255, 175, 0, 1.0)100%);
 }
 
-.borde-input {
-    border: solid 1px black;
+.borde-input{
+	border: solid 1px black;
 }
 
-ion-grid {
-    margin: 0;
+ion-grid{
+	margin: 0;
 }

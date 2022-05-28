@@ -1,6 +1,45 @@
-<form #F = "ngForm" (ngSubmit)="onSubmit(F)" ngNativeValidate>
-  <ion-label>Caption: </ion-label>
-  <ion-input placeholder="Ejemplo: Mazatlán" required></ion-input>
-  {{nuevoPost.caption}}
-  <ion-button type="submit">Subir Foto</ion-button>
-</form>
+<ion-content >
+    <ion-grid>
+        <ion-row>
+            <ion-col size-md="8" offset-md="2">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="10">
+                                    <div class="user-card-header">
+                                        <ion-avatar><img src="assets/gusta.jpg" width="50"></ion-avatar>
+                                        <ion-label class="label">{{publicacionImprimir.id}}</ion-label>
+                                    </div>
+                                </ion-col>
+                                <ion-col size="2">
+                                    <ion-button (click)="deletePost()">Eliminar</ion-button>
+                                    <ion-button fill="translucent" id="trigger-popup--{{publicacionImprimir.id}}" class="trigger"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></ion-button>
+                                    <ion-popover trigger="trigger-popup--{{publicacionImprimir.id}}">
+                                        <ng-template>
+                                            <app-popover></app-popover>
+                                        </ng-template>
+                                    </ion-popover>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-row>
+                            <ion-col style="margin-left: 10%; margin-right: 10%;">
+                                <ion-img [src]="publicacionImprimir.imagen" ></ion-img>
+                            </ion-col>
+                        </ion-row>
+                        <div class="opciones">
+                            <ion-button fill="translucent"><ion-icon name="heart-outline"></ion-icon></ion-button>
+                            <ion-button fill="translucent"><ion-icon name="paper-plane-outline"></ion-icon></ion-button>
+                            <ion-button fill="translucent"><ion-icon name="chatbubble-outline"></ion-icon></ion-button>
+                            <ion-button class="derecha" fill="translucent"><ion-icon name="bookmark"></ion-icon></ion-button>
+                        </div>
+                        <p class="caption">Cap</p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
