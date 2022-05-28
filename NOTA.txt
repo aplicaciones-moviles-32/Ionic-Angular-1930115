@@ -1,0 +1,1 @@
+Todo funcionaba bien, pero llegué a un error de los tabs y no muestra más que la parte de arriba de la app, pero si abre el inspeccionar muestra bien la conexión con la base de datos y está integrada la cámara, pero por tiempo ya no lo pude arreglar :(
